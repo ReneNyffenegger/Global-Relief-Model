@@ -1,0 +1,9 @@
+#!/bin/sh
+
+TARGET=data/Earth2014.BED2014.1min.geod.bin
+
+if [ ! -e $TARGET ]; then
+  wget   http://ddfe.curtin.edu.au/models/Earth2014/data_1min/topo_grids/Earth2014.BED2014.1min.geod.bin -O $TARGET
+else
+  echo "$TARGET already downloaded"
+fi
